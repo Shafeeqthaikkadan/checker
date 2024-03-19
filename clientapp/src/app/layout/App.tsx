@@ -2,6 +2,7 @@ import { useState } from "react";
 import Catalogue from "../../features/catalogue/Catalogue";
 import Header from "./Header";
 import { Container, ThemeProvider, createTheme } from "@mui/material";
+import { Outlet } from "react-router-dom";
 
 
 function App() {
@@ -25,7 +26,7 @@ const paletteType=darkMode ? 'dark':'light'
     <ThemeProvider theme={theme}>
       <Header handleThemeChange={handleThemeChange} darkMode={darkMode} />
       <Container>
-        <Catalogue  />
+        <Outlet />
       </Container>
 
     </ThemeProvider>
